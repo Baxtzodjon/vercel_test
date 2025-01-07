@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.scroll_blc {
+  overflow: scroll;
+}
+
+.scroll_blc::-webkit-scrollbar {
+  display: none;
+}
