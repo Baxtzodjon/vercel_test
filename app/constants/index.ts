@@ -1,4 +1,10 @@
-export const ServiceData = [
+interface ServiceItem {
+    id: number;
+    name: string;
+    title: string;
+}
+
+export const ServiceData: ServiceItem[] = [
     {
         id: Math.random(),
         name: "Tom Cruise",

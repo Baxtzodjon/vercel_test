@@ -1,8 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // Тип данных для слайдов
 type SlideData = {
@@ -94,9 +93,11 @@ const CustomSlider = () => {
                         {slideData.map((slide) => (
                             <div key={slide.id} className="slide flex-shrink-0 w-[25%] px-2">
                                 <div className="card bg-white p-6 rounded-lg shadow-lg text-center">
-                                    <img
+                                    <Image
                                         src={slide.image}
                                         alt={slide.title}
+                                        width={200}
+                                        height={200}
                                         className="w-full h-[200px] object-cover rounded-md mb-4"
                                     />
                                     <h3 className="text-2xl font-semibold text-gray-800 mb-2">{slide.title}</h3>

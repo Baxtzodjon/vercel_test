@@ -1,8 +1,8 @@
 // components/SwiperComponent.tsx
 "use client"
+import Image from "next/image";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SwiperOptions } from "swiper/types";
 
 // Интерфейс для данных
 interface SlideData {
@@ -92,8 +92,8 @@ const SwiperCmp: FC<SwiperComponentProps> = ({ slides }) => {
             >
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id}>
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={slide.imageUrl} alt={slide.title} style={{ width: '450px', height: '450px' }} />
+                        <div className="text-center">
+                            <Image src={slide.imageUrl} alt={slide.title} width={450} height={450} />
                             <h3>{slide.title}</h3>
                         </div>
                     </SwiperSlide>

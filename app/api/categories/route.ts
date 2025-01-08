@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // Массив для хранения категорий
-let categories: string[] = [];
+const categories: string[] = [];
 
 export async function GET() {
   return NextResponse.json(categories);

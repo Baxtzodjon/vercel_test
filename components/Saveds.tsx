@@ -804,10 +804,10 @@ export default AdminOrdersPage; */
             }); */
 
     // exam/app/admin/page.tsx
-    const dashboard_info = [
-        { title: 'Total Sales', num: '$7890', bgColor: 'bg-[#000000]', textColor: 'text-white' },
-        { title: 'Orders', num: '789', bgColor: 'bg-white', textColor: 'text-[#000000]' },
-    ];
+    // const dashboard_info = [
+    //     { title: 'Total Sales', num: '$7890', bgColor: 'bg-[#000000]', textColor: 'text-white' },
+    //     { title: 'Orders', num: '789', bgColor: 'bg-white', textColor: 'text-[#000000]' },
+    // ];
 
     /*  */
 

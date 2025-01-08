@@ -32,7 +32,7 @@ const ActiveSlider = () => {
                 pagination={{ clickable: true }}
                 className="max-w-[90%] lg:max-w-[80%]"
             >
-                {ServiceData.map((item: any) => {
+                {ServiceData.map((item) => {
                     return (
                         <SwiperSlide key={item.id}>
 

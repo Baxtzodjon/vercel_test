@@ -1,13 +1,4 @@
-import ActiveSlider from "@/components/ActiveSlider";
-import Datas from "@/components/Datas";
-import LoginForm from "@/components/LoginForm";
-import ProductItem from "@/components/Product";
-import SliderTeam from "@/components/SliderTeam";
-import SwiperCmp from "@/components/SwiperCmp";
 import SwiperCmpSec from "@/components/SwiperCmpSec";
-import Texts from "@/components/Texts";
-import ViewStarts from "@/components/ViewStart";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {

@@ -1,7 +1,6 @@
 "use client"
 
 import RegisterForm from "@/components/RegisterForm";
-import Link from "next/link";
 
 function Register() {
     return (

@@ -104,74 +104,72 @@ export default CategoryPage; */
 
 "use client";
 
-import { notFound } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';  // Хук для получения параметров маршрута
-
-interface Product {
-    _id: string;
-    title: string;
-    description: string;
-    price: string;
-    reviews: string;
-    images: string;
-    image_second: string;
-    image_third: string;
-    catg_prod: string; // Категория продукта
-}
+// interface Product {
+//     _id: string;
+//     title: string;
+//     description: string;
+//     price: string;
+//     reviews: string;
+//     images: string;
+//     image_second: string;
+//     image_third: string;
+//     catg_prod: string; // Категория продукта
+// }
 
 const CategoryPage = () => {
-    const { category } = useParams(); // Получаем параметр category через хук useParams
-    const [products, setProducts] = useState<Product[]>([]); // Состояние для продуктов
-    const [loading, setLoading] = useState<boolean>(true); // Состояние загрузки
-    const [error, setError] = useState<string | null>(null); // Состояние для ошибок
+    // const { category } = useParams(); // Получаем параметр category через хук useParams
+    // const [products, setProducts] = useState<Product[]>([]); // Состояние для продуктов
+    // const [loading, setLoading] = useState<boolean>(true); // Состояние загрузки
+    // const [error, setError] = useState<string | null>(null); // Состояние для ошибок
 
-    useEffect(() => {
-        // Загрузка продуктов с сервера
-        const fetchProducts = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/api/product');
-                const data = await response.json();
+    // useEffect(() => {
+    //     // Проверка, что категория существует
+    //     if (!category) {
+    //         notFound(); // Если категория не найдена, показываем 404
+    //         return;
+    //     }
 
-                if (data.success) {
-                    // Фильтруем продукты по категории
-                    const filteredProducts = data.data.filter(
-                        (product: Product) => product.catg_prod === category
-                    );
+    //     // Загрузка продуктов с сервера
+    //     const fetchProducts = async () => {
+    //         try {
+    //             const response = await fetch('http://localhost:3000/api/product');
+    //             const data = await response.json();
 
-                    setProducts(filteredProducts);
+    //             if (data.success) {
+    //                 // Фильтруем продукты по категории
+    //                 const filteredProducts = data.data.filter(
+    //                     (product: Product) => product.catg_prod === category
+    //                 );
 
-                    if (filteredProducts.length === 0) {
-                        notFound(); // Если продукты не найдены
-                    }
-                } else {
-                    setError('Ошибка при загрузке данных');
-                }
-            } catch (error) {
-                setError('Ошибка при загрузке данных');
-            } finally {
-                setLoading(false); // Окончание загрузки
-            }
-        };
+    //                 setProducts(filteredProducts);
 
-        fetchProducts();
-    }, [category]); // Запрос при изменении категории
+    //                 if (filteredProducts.length === 0) {
+    //                     notFound(); // Если продукты не найдены
+    //                 }
+    //             } else {
+    //                 setError('Ошибка при загрузке данных');
+    //             }
+    //         } catch (error) {
+    //             setError('Ошибка при загрузке данных');
+    //         } finally {
+    //             setLoading(false); // Окончание загрузки
+    //         }
+    //     };
 
-    if (loading) {
-        return <div>Загрузка...</div>;
-    }
+    //     fetchProducts();
+    // }, [category]); // Запрос при изменении категории
 
-    if (error) {
-        return <div>{error}</div>;
-    }
+    // if (loading) {
+    //     return <div>Загрузка...</div>;
+    // }
 
-    if (!category) {
-        notFound(); // Если категория не определена
-    }
+    // if (error) {
+    //     return <div>{error}</div>;
+    // }
 
     return (
         <div>
-            <h1>Категория: {category}</h1>
+            {/* <h1>Категория: {category}</h1>
 
             <ul>
                 {products.map((product) => (
@@ -181,15 +179,17 @@ const CategoryPage = () => {
                             <p>{product.description}</p>
                             <p><strong>Цена:</strong> {product.price}</p>
                             <p><strong>Отзывы:</strong> {product.reviews}</p>
-                            <img src={product.images} alt={product.title} width={100} />
+                            <Image src={product.images} alt={product.title} width={100} height={100} />
                             <div>
-                                <img src={product.image_second} alt="Second image" width={100} />
-                                <img src={product.image_third} alt="Third image" width={100} />
+                                <Image src={product.image_second} alt="Second image" width={100} height={100} />
+                                <Image src={product.image_third} alt="Third image" width={100} height={100} />
                             </div>
                         </div>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
+
+            <h1>hello it is categories category</h1>
         </div>
     );
 };
